@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="postRecord.view.MainController">
+   <children>
+      <BorderPane prefHeight="533.0" prefWidth="943.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Datoteka">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleMenuClose" text="Zatvori" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Dodaj">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleMenuAddPost" text="Dodaj pošiljku" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddMember" text="Dodaj korisnika" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Pregled">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuViewPost" text="Pregled pošiljki" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuViewMember" text="Pregled korisnika" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuFullScreen" text="Puni zaslon" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Pomoć">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="Poslano">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="335.0" prefWidth="927.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="192.0" prefWidth="1077.0">
+                                       <children>
+                                          <TextField prefHeight="25.0" prefWidth="229.0" promptText="Pregled kupaca" />
+                                          <VBox alignment="CENTER" prefHeight="141.0" prefWidth="613.0">
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Broj pošiljke" textAlignment="CENTER" wrappingWidth="517.546875" />
+                                                <Text layoutX="10.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mjesto" textAlignment="CENTER" wrappingWidth="682.546875">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="187.0" prefWidth="1077.0">
+                                       <children>
+                                          <TextField prefHeight="25.0" prefWidth="230.0" promptText="Pregled narudžbi" />
+                                          <VBox alignment="CENTER" prefHeight="105.0" prefWidth="574.0">
+                                             <HBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ime Kupca" textAlignment="CENTER" wrappingWidth="596.546875" />
+                                                <Text layoutX="10.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prezime kupca" textAlignment="CENTER" wrappingWidth="676.546875">
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Text>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <JFXButton text="Problem" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                <Tab text="Uredi">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="447.0" prefWidth="1077.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <top>
+                                    <JFXTextField alignment="CENTER" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="837.0" promptText="Unesi id pošiljke" BorderPane.alignment="CENTER">
+                                       <BorderPane.margin>
+                                          <Insets bottom="10.0" right="10.0" top="20.0" />
+                                       </BorderPane.margin>
+                                       <padding>
+                                          <Insets left="30.0" right="20.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                 </top>
+                                 <center>
+                                    <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <padding>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </padding>
+                                    </ListView>
+                                 </center>
+                                 <bottom>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <JFXButton prefHeight="113.0" prefWidth="274.0" text="Uredi" />
+                                          <JFXButton layoutX="10.0" layoutY="10.0" prefHeight="113.0" prefWidth="274.0" text="Predaj" />
+                                       </children>
+                                    </HBox>
+                                 </bottom>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TabPane>
+         </center>
+         <bottom>
+            <HBox prefHeight="177.0" prefWidth="1254.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#dodajKorisnika" prefHeight="194.0" prefWidth="272.0" text="DODAJ PRIMAOCA" textOverrun="WORD_ELLIPSIS">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Ikone/player1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#dodajPosiljku" prefHeight="194.0" prefWidth="272.0" text="DODAJ POŠILJKU" textOverrun="WORD_ELLIPSIS">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Ikone/Mail-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="282.0" layoutY="10.0" mnemonicParsing="false" onAction="#pregledPosiljki" prefHeight="194.0" prefWidth="272.0" text="PREGLED POŠILJKI" textOverrun="WORD_ELLIPSIS">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Ikone/review-icon-png-2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="554.0" layoutY="10.0" mnemonicParsing="false" onAction="#pregledKorisnika" prefHeight="194.0" prefWidth="272.0" text="PREGLED PRIMAOCA" textOverrun="WORD_ELLIPSIS">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Ikone/ljudi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="TOP" layoutX="826.0" layoutY="10.0" mnemonicParsing="false" onAction="#ucitajPostavke" prefHeight="194.0" prefWidth="272.0" text="POSTAVKE" textOverrun="WORD_ELLIPSIS">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Ikone/mechanical_operation_410285.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

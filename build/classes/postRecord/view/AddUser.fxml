@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="384.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="postRecord.view.AddUserController">
+   <children>
+      <VBox prefHeight="442.0" prefWidth="385.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="ime" labelFloat="true" maxWidth="365.0" minWidth="365.0" prefHeight="8.0" prefWidth="365.0" promptText="Ime">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="prezime" labelFloat="true" layoutX="20.0" layoutY="20.0" maxWidth="365.0" minWidth="365.0" prefHeight="8.0" prefWidth="365.0" promptText="Prezime">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="adresa" labelFloat="true" layoutX="20.0" layoutY="20.0" maxWidth="365.0" minWidth="365.0" prefHeight="8.0" prefWidth="365.0" promptText="Adresa">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="broj_mobitela" labelFloat="true" layoutX="10.0" layoutY="73.0" maxWidth="365.0" minWidth="365.0" prefHeight="8.0" prefWidth="365.0" promptText="Broj mobitela">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="grad" labelFloat="true" layoutX="10.0" layoutY="159.0" maxWidth="365.0" minWidth="365.0" prefHeight="8.0" prefWidth="365.0" promptText="Grad">
+               <padding>
+                  <Insets left="10.0" right="10.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <HBox prefHeight="63.0" prefWidth="385.0">
+               <children>
+                  <JFXButton fx:id="saveButton" onAction="#addUser" prefHeight="146.0" prefWidth="179.0" stylesheets="@AddUser.css" text="Save">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></JFXButton>
+                  <JFXButton fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="124.0" prefWidth="221.0" stylesheets="@AddUser.css" text="Cancel" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
